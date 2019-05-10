@@ -1,0 +1,3736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Map Makers of Krunker - &#127797;asset-gallery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 600;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #839496 !important;
+}
+
+.mention {
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/484192043833491487/b55d5a10920a2e826b9a4fefeb0bc543.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Map Makers of Krunker</div>
+        <div class="info__channel-name">&#127797;asset-gallery</div>
+        
+            <div class="info__channel-topic"></div>
+
+        <div class="info__channel-message-count">224 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268106721392590848/2705feffbefeed2b05046e0b07230fe7.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Phil Swift#8278">Phil Swift</span>
+                <span class="chatlog__timestamp">May-07-19 09:15 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Apple</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575309705983950858/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575309705983950858/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="👌" title="👌" src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" />
+                                    <span class="chatlog__reaction-count">5</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇬" title="🇬" src="https://twemoji.maxcdn.com/2/72x72/1f1ec.png" />
+                                    <span class="chatlog__reaction-count">10</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇷" title="🇷" src="https://twemoji.maxcdn.com/2/72x72/1f1f7.png" />
+                                    <span class="chatlog__reaction-count">11</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇦" title="🇦" src="https://twemoji.maxcdn.com/2/72x72/1f1e6.png" />
+                                    <span class="chatlog__reaction-count">10</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇵" title="🇵" src="https://twemoji.maxcdn.com/2/72x72/1f1f5.png" />
+                                    <span class="chatlog__reaction-count">11</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇪" title="🇪" src="https://twemoji.maxcdn.com/2/72x72/1f1ea.png" />
+                                    <span class="chatlog__reaction-count">12</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="💸" title="💸" src="https://twemoji.maxcdn.com/2/72x72/1f4b8.png" />
+                                    <span class="chatlog__reaction-count">5</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🔞" title="🔞" src="https://twemoji.maxcdn.com/2/72x72/1f51e.png" />
+                                    <span class="chatlog__reaction-count">4</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="💦" title="💦" src="https://twemoji.maxcdn.com/2/72x72/1f4a6.png" />
+                                    <span class="chatlog__reaction-count">4</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇿" title="🇿" src="https://twemoji.maxcdn.com/2/72x72/1f1ff.png" />
+                                    <span class="chatlog__reaction-count">6</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇺" title="🇺" src="https://twemoji.maxcdn.com/2/72x72/1f1fa.png" />
+                                    <span class="chatlog__reaction-count">6</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇨" title="🇨" src="https://twemoji.maxcdn.com/2/72x72/1f1e8.png" />
+                                    <span class="chatlog__reaction-count">6</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="©" title="©" src="https://twemoji.maxcdn.com/2/72x72/a9.png" />
+                                    <span class="chatlog__reaction-count">4</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="draw4" title="draw4" src="https://cdn.discordapp.com/emojis/569639677259153409.png" />
+                                    <span class="chatlog__reaction-count">3</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="thonk" title="thonk" src="https://cdn.discordapp.com/emojis/531220439624843279.png" />
+                                    <span class="chatlog__reaction-count">1</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🤔" title="🤔" src="https://twemoji.maxcdn.com/2/72x72/1f914.png" />
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="👀" title="👀" src="https://twemoji.maxcdn.com/2/72x72/1f440.png" />
+                                    <span class="chatlog__reaction-count">3</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🍎" title="🍎" src="https://twemoji.maxcdn.com/2/72x72/1f34e.png" />
+                                    <span class="chatlog__reaction-count">4</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="guest_2" title="guest_2" src="https://cdn.discordapp.com/emojis/557777365804122133.png" />
+                                    <span class="chatlog__reaction-count">6</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="madman" title="madman" src="https://cdn.discordapp.com/emojis/498187900467281940.png" />
+                                    <span class="chatlog__reaction-count">11</span>
+                                </div>
+                        </div>
+                        <div class="chatlog__content">
+                            <span class="markdown">3500 objects</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="madman" title="madman" src="https://cdn.discordapp.com/emojis/498187900467281940.png" />
+                                    <span class="chatlog__reaction-count">10</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/570371588453695489/fcaff7205b0059d50a0d537cf1659fc0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Eskrr#0571">Eskrr</span>
+                <span class="chatlog__timestamp">May-07-19 05:51 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">roof, obj - 28</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575439604757430289/roofasset.txt">
+                                
+                                    Attachment: roofasset.txt (1.8 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575439664853417994/Screen_Shot_2019-05-07_at_17.50.10.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575439664853417994/Screen_Shot_2019-05-07_at_17.50.10.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png" />
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/225804665265192960/47ac578f507e85bf9935163d368f1ec3.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="NoFuxGiven#7566">NoFuxGiven</span>
+                <span class="chatlog__timestamp">May-07-19 05:53 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">All credits to <span class="mention" title="Cyprus.#1212">@Cyprus.</span>
+I just did the photo edit</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575440055288594434/Untitled-1.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575440055288594434/Untitled-1.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇱" title="🇱" src="https://twemoji.maxcdn.com/2/72x72/1f1f1.png" />
+                                    <span class="chatlog__reaction-count">4</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🇮" title="🇮" src="https://twemoji.maxcdn.com/2/72x72/1f1ee.png" />
+                                    <span class="chatlog__reaction-count">3</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="gnomed" title="gnomed" src="https://cdn.discordapp.com/emojis/531210104385830953.png" />
+                                    <span class="chatlog__reaction-count">1</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="👌" title="👌" src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" />
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="Verified" title="Verified" src="https://cdn.discordapp.com/emojis/540749471743737867.png" />
+                                    <span class="chatlog__reaction-count">5</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="Tester" title="Tester" src="https://cdn.discordapp.com/emojis/542250197355593729.png" />
+                                    <span class="chatlog__reaction-count">3</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/273681352476590081/49133db961e5c0d8a84024804238b2a6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="LavaToxins#0001">LavaToxins</span>
+                <span class="chatlog__timestamp">May-07-19 06:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">This is all that I have saved. Unfortunately, I didn’t save the creators.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Dumpster with trash:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/527708119711875082/Dumpster-10-obj.txt">https://cdn.discordapp.com/attachments/520439463193870346/527708119711875082/Dumpster-10-obj.txt</a>
+
+Bulldozer:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/527631551937249318/Bulldozer-80-obj.txt">https://cdn.discordapp.com/attachments/520439463193870346/527631551937249318/Bulldozer-80-obj.txt</a>
+
+Concrete barrier:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/527638144787546132/Concrete-Wall-6-obj.txt">https://cdn.discordapp.com/attachments/520439463193870346/527638144787546132/Concrete-Wall-6-obj.txt</a>
+
+Pallets:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/527689674899062785/Pallets-21-obj.txt">https://cdn.discordapp.com/attachments/520439463193870346/527689674899062785/Pallets-21-obj.txt</a>
+
+Rocket:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/527390130302877706/rocket.txt">https://cdn.discordapp.com/attachments/520439463193870346/527390130302877706/rocket.txt</a>
+
+Big Boat Non Rotated:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/527217975447781378/Big_Boat.txt">https://cdn.discordapp.com/attachments/520439463193870346/527217975447781378/Big_Boat.txt</a>
+
+Top of Chimney:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526898724673421314/prefab_Chimney2.txt">https://cdn.discordapp.com/attachments/520439463193870346/526898724673421314/prefab_Chimney2.txt</a></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Humvee:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526875775924699166/Humvee.txt">https://cdn.discordapp.com/attachments/520439463193870346/526875775924699166/Humvee.txt</a>
+
+Cannon:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526796909902430238/Cannon.txt">https://cdn.discordapp.com/attachments/520439463193870346/526796909902430238/Cannon.txt</a>
+
+TV on table with speakers:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526545094199869441/prefab_Floor-Speaker.txt">https://cdn.discordapp.com/attachments/520439463193870346/526545094199869441/prefab_Floor-Speaker.txt</a>
+
+Ceiling Fan:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526541457193041931/prefab_Celing-Fan.txt">https://cdn.discordapp.com/attachments/520439463193870346/526541457193041931/prefab_Celing-Fan.txt</a>
+
+Nightstand:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526526478364442642/prefab_Side-Table-With-Lamp.txt">https://cdn.discordapp.com/attachments/520439463193870346/526526478364442642/prefab_Side-Table-With-Lamp.txt</a>
+
+Loveseat:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526460612205871125/Love-Seat.txt">https://cdn.discordapp.com/attachments/520439463193870346/526460612205871125/Love-Seat.txt</a>
+
+Desk:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526431680051937299/Desk_with_Lamp.txt">https://cdn.discordapp.com/attachments/520439463193870346/526431680051937299/Desk_with_Lamp.txt</a>
+
+Stool:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526411003299364884/Stool.txt">https://cdn.discordapp.com/attachments/520439463193870346/526411003299364884/Stool.txt</a>
+
+Hatchback car:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526137177634111518/Hatchback.txt">https://cdn.discordapp.com/attachments/520439463193870346/526137177634111518/Hatchback.txt</a>
+
+Floor lamp:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526058190698184714/LAMP.txt">https://cdn.discordapp.com/attachments/520439463193870346/526058190698184714/LAMP.txt</a>
+
+Chair:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526047290948059146/prefab_KitchenChair.txt">https://cdn.discordapp.com/attachments/520439463193870346/526047290948059146/prefab_KitchenChair.txt</a>
+
+Fridge:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/526039122897403904/prefab_Fridge.txt">https://cdn.discordapp.com/attachments/520439463193870346/526039122897403904/prefab_Fridge.txt</a>
+
+Car:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/525955026338971658/Car.txt">https://cdn.discordapp.com/attachments/520439463193870346/525955026338971658/Car.txt</a>
+
+Earth:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/525434496431161373/prefab_Earth.txt">https://cdn.discordapp.com/attachments/520439463193870346/525434496431161373/prefab_Earth.txt</a>
+
+Large Truck:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/524469861884100618/prefab_Semi_Truck.txt">https://cdn.discordapp.com/attachments/520439463193870346/524469861884100618/prefab_Semi_Truck.txt</a>
+
+Delivery truck:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/524465766507216917/prefab_Delivery_Truck.txt">https://cdn.discordapp.com/attachments/520439463193870346/524465766507216917/prefab_Delivery_Truck.txt</a>
+
+Wall lamp:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/523711578097451009/Wall_light_1.txt">https://cdn.discordapp.com/attachments/520439463193870346/523711578097451009/Wall_light_1.txt</a>
+
+Lab Beakers:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/553397062566150156/asset_labbeakers.txt">https://cdn.discordapp.com/attachments/520439463193870346/553397062566150156/asset_labbeakers.txt</a></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Okay, turns out I missed a few while copying.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">US Flag on pole:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/552168786393038848/asset_FlagpoleUSA_3.txt">https://cdn.discordapp.com/attachments/520439463193870346/552168786393038848/asset_FlagpoleUSA_3.txt</a>
+
+Gnome:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/552102703162195968/asset_noggin.txt">https://cdn.discordapp.com/attachments/520439463193870346/552102703162195968/asset_noggin.txt</a>
+
+WW1 anti air gun:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/551149919038341135/asset_WW1_AA_GUN.txt">https://cdn.discordapp.com/attachments/520439463193870346/551149919038341135/asset_WW1_AA_GUN.txt</a>
+
+Portal turret:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/550827408584867840/asset_portal_turret.txt">https://cdn.discordapp.com/attachments/520439463193870346/550827408584867840/asset_portal_turret.txt</a>
+
+Yellow Minecraft bed:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/550637709798932480/yellow_bed.txt">https://cdn.discordapp.com/attachments/520439463193870346/550637709798932480/yellow_bed.txt</a>
+
+Race car:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/550302395931033611/asset_Racecar.txt">https://cdn.discordapp.com/attachments/520439463193870346/550302395931033611/asset_Racecar.txt</a>
+
+Muscle car:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/550269879907778592/asset_muscle_car.txt">https://cdn.discordapp.com/attachments/520439463193870346/550269879907778592/asset_muscle_car.txt</a>
+
+Forklift:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/547277173820751872/asset_Forklift.txt">https://cdn.discordapp.com/attachments/520439463193870346/547277173820751872/asset_Forklift.txt</a>
+
+WW1 tank:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/546934534235619338/WW1_Tank_Final.txt">https://cdn.discordapp.com/attachments/520439463193870346/546934534235619338/WW1_Tank_Final.txt</a>
+
+Pirate ship:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/545932703896436737/asset_Black_Pirate_Ship_2.txt">https://cdn.discordapp.com/attachments/520439463193870346/545932703896436737/asset_Black_Pirate_Ship_2.txt</a>
+
+Box truck:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/544911398346424345/asset_BoxTruck.txt">https://cdn.discordapp.com/attachments/520439463193870346/544911398346424345/asset_BoxTruck.txt</a>
+
+War ship:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/542193376582434847/warship_1389.txt">https://cdn.discordapp.com/attachments/520439463193870346/542193376582434847/warship_1389.txt</a></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Viking ship:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/542183323447853066/viking_ship_496.txt">https://cdn.discordapp.com/attachments/520439463193870346/542183323447853066/viking_ship_496.txt</a>
+
+Panda:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/547802110625054730/asset_panda.txt">https://cdn.discordapp.com/attachments/520439463193870346/547802110625054730/asset_panda.txt</a>
+
+Billboard TV:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/542914157536608256/asset_tv_ad.txt">https://cdn.discordapp.com/attachments/520439463193870346/542914157536608256/asset_tv_ad.txt</a>
+
+Trees:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/542911240083734548/trees_13.txt">https://cdn.discordapp.com/attachments/520439463193870346/542911240083734548/trees_13.txt</a>
+
+Someone’s face:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/542217642933616650/Sidney.txt">https://cdn.discordapp.com/attachments/520439463193870346/542217642933616650/Sidney.txt</a>
+
+Dragon Head:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/541375259232960552/dragon-1305.txt">https://cdn.discordapp.com/attachments/520439463193870346/541375259232960552/dragon-1305.txt</a>
+
+Large Black Pirate Ship:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538406034486853642/asset_Black_Pirate_Ship.txt">https://cdn.discordapp.com/attachments/520439463193870346/538406034486853642/asset_Black_Pirate_Ship.txt</a>
+
+Muk:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538201177196855297/Sewage.txt">https://cdn.discordapp.com/attachments/520439463193870346/538201177196855297/Sewage.txt</a>
+
+Vampire:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538188397454557184/asset_vampire.txt">https://cdn.discordapp.com/attachments/520439463193870346/538188397454557184/asset_vampire.txt</a>
+
+Command Line:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538114480144646172/TechSignature.txt">https://cdn.discordapp.com/attachments/520439463193870346/538114480144646172/TechSignature.txt</a>
+
+Nyan Cat:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538114202481459232/asset_NyanCat1.txt">https://cdn.discordapp.com/attachments/520439463193870346/538114202481459232/asset_NyanCat1.txt</a>
+
+Command Line Complex:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538110336599982110/asset_Techy_Signature.txt">https://cdn.discordapp.com/attachments/520439463193870346/538110336599982110/asset_Techy_Signature.txt</a>
+
+Rowboat:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538019425245200384/asset_Boat1.txt">https://cdn.discordapp.com/attachments/520439463193870346/538019425245200384/asset_Boat1.txt</a>
+
+Rowboat2:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538019422825349129/asset_Boat2.txt">https://cdn.discordapp.com/attachments/520439463193870346/538019422825349129/asset_Boat2.txt</a>
+
+Rowboat3:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/538019420987981834/asset_Boat3.txt">https://cdn.discordapp.com/attachments/520439463193870346/538019420987981834/asset_Boat3.txt</a>
+
+Spruce tree:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/537738534170394645/asset_Spruce.txt">https://cdn.discordapp.com/attachments/520439463193870346/537738534170394645/asset_Spruce.txt</a>
+
+Barn:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/537503267538862080/betterFarm.txt">https://cdn.discordapp.com/attachments/520439463193870346/537503267538862080/betterFarm.txt</a>
+
+Nuke:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/537016442588102671/asset_Nuke.txt">https://cdn.discordapp.com/attachments/520439463193870346/537016442588102671/asset_Nuke.txt</a></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="Techy" title="Techy" src="https://cdn.discordapp.com/emojis/531970503276232709.png" />
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                        </div>
+                        <div class="chatlog__content">
+                            <span class="markdown">Small White Pirate Ship:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/536956695524671509/asset_Pirate_Ship.txt">https://cdn.discordapp.com/attachments/520439463193870346/536956695524671509/asset_Pirate_Ship.txt</a>
+
+Rainbow:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/535969308686155788/asset_rainbow.txt">https://cdn.discordapp.com/attachments/520439463193870346/535969308686155788/asset_rainbow.txt</a>
+
+Palm Tree:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/535156649480945694/Palm-Tree-v3_22_obj_.txt">https://cdn.discordapp.com/attachments/520439463193870346/535156649480945694/Palm-Tree-v3_22_obj_.txt</a>
+
+Tank:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/532011396465164288/asset_Tank_By_DaslstWalter_42_obj.txt">https://cdn.discordapp.com/attachments/520439463193870346/532011396465164288/asset_Tank_By_DaslstWalter_42_obj.txt</a>
+
+Big Boat:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/531323802228097036/asset_BigBoat90deg.txt">https://cdn.discordapp.com/attachments/520439463193870346/531323802228097036/asset_BigBoat90deg.txt</a>
+
+Pool table:
+<a href="https://cdn.discordapp.com/attachments/520439463193870346/529073420428902422/prefab_pooltable.txt">https://cdn.discordapp.com/attachments/520439463193870346/529073420428902422/prefab_pooltable.txt</a></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">That should be all of them</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/376782997388525578/165125c8dadaba79adb39b63b5c09de4.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="zxmonkey14#8291">zxmonkey14</span>
+                <span class="chatlog__timestamp">May-07-19 06:47 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">these are all the assets that I saved, hopefully people can use them still</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453795685892118/asset_Helicopter.txt">
+                                
+                                    Attachment: asset_Helicopter.txt (2.17 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453801927016490/asset_park.txt">
+                                
+                                    Attachment: asset_park.txt (3.99 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453803676041217/asset_boblap_forklift.txt">
+                                
+                                    Attachment: asset_boblap_forklift.txt (6.47 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453805232128021/RADIO_TOWER_asset.txt">
+                                
+                                    Attachment: RADIO_TOWER_asset.txt (7.41 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453806351876117/asset_boblap_fountain_1.txt">
+                                
+                                    Attachment: asset_boblap_fountain_1.txt (9.98 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453808424124436/asset_farm_house_w_barn.txt">
+                                
+                                    Attachment: asset_farm_house_w_barn.txt (7.12 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453809120247840/asset_cargo_ship_updated.txt">
+                                
+                                    Attachment: asset_cargo_ship_updated.txt (23.3 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453810688786442/asset_beach_houses.txt">
+                                
+                                    Attachment: asset_beach_houses.txt (11.46 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453811817054208/asset_mini_house_r.txt">
+                                
+                                    Attachment: asset_mini_house_r.txt (1.36 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453813268283392/asset_port_houses.txt">
+                                
+                                    Attachment: asset_port_houses.txt (35.27 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453845308833799/asset_KOTH_CASTLE.txt">
+                                
+                                    Attachment: asset_KOTH_CASTLE.txt (6.7 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453850455244800/asset_Barn.txt">
+                                
+                                    Attachment: asset_Barn.txt (2.19 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453854112546816/asset_Beach_House_.txt">
+                                
+                                    Attachment: asset_Beach_House_.txt (4.54 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453858763898880/asset_BigBoat90deg.txt">
+                                
+                                    Attachment: asset_BigBoat90deg.txt (14.05 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453863042220052/asset_sign.txt">
+                                
+                                    Attachment: asset_sign.txt (7.91 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453866678681600/asset_SolarFountain.txt">
+                                
+                                    Attachment: asset_SolarFountain.txt (2.22 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453870369800203/asset_boards.txt">
+                                
+                                    Attachment: asset_boards.txt (114 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453873649745921/asset_rocks.txt">
+                                
+                                    Attachment: asset_rocks.txt (190 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453877114109963/asset_house_3.txt">
+                                
+                                    Attachment: asset_house_3.txt (2.3 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453880847040561/asset_house_2.txt">
+                                
+                                    Attachment: asset_house_2.txt (1.25 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453897192374283/asset_market_tents.txt">
+                                
+                                    Attachment: asset_market_tents.txt (1.8 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453902338654218/asset_truck_tunnel.txt">
+                                
+                                    Attachment: asset_truck_tunnel.txt (673 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453907220955157/asset_house_1.txt">
+                                
+                                    Attachment: asset_house_1.txt (601 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453911364796421/asset_Black_Pirate_Ship.txt">
+                                
+                                    Attachment: asset_Black_Pirate_Ship.txt (12.09 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453915760427010/asset_Forklift.txt">
+                                
+                                    Attachment: asset_Forklift.txt (1.06 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453921192181760/asset_crane.txt">
+                                
+                                    Attachment: asset_crane.txt (14.1 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575453926351175683/asset_WorkingTrampolineDJ.txt">
+                                
+                                    Attachment: asset_WorkingTrampolineDJ.txt (1.35 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/428782694411796482/a27f5b7f82ff4aa40c4dd8d50a3db0d4.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="FeblePancake97#7164">FeblePancake97</span>
+                <span class="chatlog__timestamp">May-07-19 08:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Barrier</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">17 objects</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575473870786789377/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575473870786789377/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🆗" title="🆗" src="https://twemoji.maxcdn.com/2/72x72/1f197.png" />
+                                    <span class="chatlog__reaction-count">4</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="Verified" title="Verified" src="https://cdn.discordapp.com/emojis/540749471743737867.png" />
+                                    <span class="chatlog__reaction-count">3</span>
+                                </div>
+                        </div>
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575473970208309299/Barrier.txt">
+                                
+                                    Attachment: Barrier.txt (1.37 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/517318592782663716/491feedbdaf635d6f0a9d70966b9bb5a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="RagingScout95#5393">RagingScout95</span>
+                <span class="chatlog__timestamp">May-08-19 02:12 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mack Truck</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575565690870693889/Mack_Truck_asset.txt">
+                                
+                                    Attachment: Mack_Truck_asset.txt (11.62 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575565719572316160/Untitled.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575565719572316160/Untitled.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">total object : 196</span>
+
+                                <span class="chatlog__edited-timestamp" title="May-08-19 02:14 AM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Truck With Ramp</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575566239837978635/Truckramp.txt">
+                                
+                                    Attachment: Truckramp.txt (12.12 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575566274806153216/Untitled.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575566274806153216/Untitled.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Can be use as ramp in maps</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">total objects :  199</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Wooden bridge asset</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575566667367841794/Wooden_bridge_asset_pic.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575566667367841794/Wooden_bridge_asset_pic.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575566781461299211/Wooden_Bridge_Asset.txt">
+                                
+                                    Attachment: Wooden_Bridge_Asset.txt (1.96 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Total objects :42</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575567109216665600/Traffic_Light.txt">
+                                
+                                    Attachment: Traffic_Light.txt (1.65 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Traffic_Light</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575567110634471425/Traffic_Light.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575567110634471425/Traffic_Light.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Total Object :  29</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/517318592782663716/491feedbdaf635d6f0a9d70966b9bb5a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="RagingScout95#5393">RagingScout95</span>
+                <span class="chatlog__timestamp">May-08-19 02:28 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Wooden_house_asset</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575569808221798400/bandicam_2019-04-27_22-15-05-998_-_Copy.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575569808221798400/bandicam_2019-04-27_22-15-05-998_-_Copy.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575569855156060170/Wooden_house_asset.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575569855156060170/Wooden_house_asset.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575570983784808450/Wooden_house_asset_1.txt">
+                                
+                                    Attachment: Wooden_house_asset_1.txt (10.83 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Total object : 196</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/517318592782663716/491feedbdaf635d6f0a9d70966b9bb5a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="RagingScout95#5393">RagingScout95</span>
+                <span class="chatlog__timestamp">May-08-19 02:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Modern House Asset</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575573418435411978/Modern_House_asset.txt">
+                                
+                                    Attachment: Modern_House_asset.txt (10.96 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575573477273239572/Untitled.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575573477273239572/Untitled.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Total Objects : 208</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575573676389564417/Modern_house_asset_without_color_walls.txt">
+                                
+                                    Attachment: Modern_house_asset_without_color_walls.txt (10.75 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Watch Tower</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575574373705056266/Untitled.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575574373705056266/Untitled.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575574462615781377/Watch_tower_.txt">
+                                
+                                    Attachment: Watch_tower_.txt (4.23 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Total Objects : 80</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/517318592782663716/491feedbdaf635d6f0a9d70966b9bb5a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="RagingScout95#5393">RagingScout95</span>
+                <span class="chatlog__timestamp">May-08-19 02:55 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">cherry_blossom_tree</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575576653866991627/cherry_blossom_tree_1.txt">
+                                
+                                    Attachment: cherry_blossom_tree_1.txt (9 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575576653905002496/bandicam_2019-05-08_12-26-30-625.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575576653905002496/bandicam_2019-05-08_12-26-30-625.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🤔" title="🤔" src="https://twemoji.maxcdn.com/2/72x72/1f914.png" />
+                                    <span class="chatlog__reaction-count">3</span>
+                                </div>
+                        </div>
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575576659667976213/bandicam_2019-05-08_12-26-38-356.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/575576659667976213/bandicam_2019-05-08_12-26-38-356.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Total Objects : 135</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="👌" title="👌" src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" />
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/521957465894551555/4d853b31fa1dae3853a58074e43327e0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ribombee#7655">Ribombee</span>
+                <span class="chatlog__timestamp">May-08-19 09:55 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575682108761047050/Custom_Objects.zip">
+                                
+                                    Attachment: Custom_Objects.zip (2.18 MB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="📌" title="📌" src="https://twemoji.maxcdn.com/2/72x72/1f4cc.png" />
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="Verified" title="Verified" src="https://cdn.discordapp.com/emojis/540749471743737867.png" />
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                        </div>
+                        <div class="chatlog__content">
+                            <span class="markdown">those are after personification by myself</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">so some assets that is useless 4 me is not here</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">and some r colorized + collidable switch for rotated</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">and some r after filtered (u c I had folders within it)</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/550184982275162120/9095c067e224a302747d2529972785ee.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="nathan#0536">nathan</span>
+                <span class="chatlog__timestamp">May-08-19 03:19 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575763841858666511/dummyasset.txt">
+                                
+                                    Attachment: dummyasset.txt (1.09 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575763872619954207/targetasset.txt">
+                                
+                                    Attachment: targetasset.txt (343 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/575763961811697676/asset_window.txt">
+                                
+                                    Attachment: asset_window.txt (431 B)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/477965041568710686/c52272c10c49babdfa0f2dcf988fcbfd.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triassic#9732">Triassic</span>
+                <span class="chatlog__timestamp">May-09-19 03:53 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576134774041739282/Wooden_Bridge_Asset.txt">
+                                
+                                    Attachment: Wooden_Bridge_Asset.txt (1.96 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/484079380893794305/fedcdee019196820bef47873bf253fb8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="onyx} AG EthicallySuspect#2238">onyx} AG EthicallySuspect</span>
+                <span class="chatlog__timestamp">May-09-19 03:55 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576135060005322772/asset_Gate_2.txt">
+                                
+                                    Attachment: asset_Gate_2.txt (11.24 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">g a  t e</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/218811772964962316/933e6b397b1148f4bbc2617437eac65b.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Sheena#3249">Sheena</span>
+                <span class="chatlog__timestamp">May-09-19 03:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576135693772914708/port_house_1.txt">
+                                
+                                    Attachment: port_house_1.txt (6.85 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/373991924010450945/606b7b0abe7592596f4eb4470dfea65f.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Razzah#1202">Razzah</span>
+                <span class="chatlog__timestamp">May-09-19 03:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576135696838819841/asset_CharModel.txt">
+                                
+                                    Attachment: asset_CharModel.txt (710 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576135715130179586/2dFire.txt">
+                                
+                                    Attachment: 2dFire.txt (2.46 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/218811772964962316/933e6b397b1148f4bbc2617437eac65b.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Sheena#3249">Sheena</span>
+                <span class="chatlog__timestamp">May-09-19 03:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576135749477466152/porthouse2.txt">
+                                
+                                    Attachment: porthouse2.txt (8.89 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/497575587188310016/f4ab059eab1759411e33ac83979525e0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Sulam#6761">Sulam</span>
+                <span class="chatlog__timestamp">May-09-19 04:27 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576143253007630348/asset_tv_ad.txt">
+                                
+                                    Attachment: asset_tv_ad.txt (657 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576143331718070275/Bell.txt">
+                                
+                                    Attachment: Bell.txt (2.42 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576143430623821864/asset_Forklift.txt">
+                                
+                                    Attachment: asset_Forklift.txt (1.06 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576143473967759381/Train_Final_1.txt">
+                                
+                                    Attachment: Train_Final_1.txt (20 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268106721392590848/2705feffbefeed2b05046e0b07230fe7.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Phil Swift#8278">Phil Swift</span>
+                <span class="chatlog__timestamp">May-09-19 04:43 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576147340071796756/asset_Closed_Missile_Silo.txt">
+                                
+                                    Attachment: asset_Closed_Missile_Silo.txt (5.2 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576147357855514634/asset_Floaty_Tank.txt">
+                                
+                                    Attachment: asset_Floaty_Tank.txt (4.19 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576147387354185728/asset_M1_Abrams_Tank.txt">
+                                
+                                    Attachment: asset_M1_Abrams_Tank.txt (16.6 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576147409202184295/asset_Missile_Silo.txt">
+                                
+                                    Attachment: asset_Missile_Silo.txt (9.65 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576147435504664616/asset_M29.txt">
+                                
+                                    Attachment: asset_M29.txt (12.38 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/177853938698158080/5cc1afebf581ce753bda132db76de213.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Martinmagi#7989">Martinmagi</span>
+                <span class="chatlog__timestamp">May-09-19 05:01 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576151848113799179/Arcade_Machine.txt">
+                                
+                                    Attachment: Arcade_Machine.txt (797 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576151845261803521/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576151845261803521/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152157238067281/Heart.txt">
+                                
+                                    Attachment: Heart.txt (1.51 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152155736637440/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576152155736637440/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152493399080961/asset_AtarYellow.txt">
+                                
+                                    Attachment: asset_AtarYellow.txt (4.98 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152492488785959/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576152492488785959/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152662152577055/asset_Black_Pirate_Ship_2.txt">
+                                
+                                    Attachment: asset_Black_Pirate_Ship_2.txt (11.71 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152659808223262/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576152659808223262/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152756394524692/asset_Boat1.txt">
+                                
+                                    Attachment: asset_Boat1.txt (1.26 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152756511965184/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576152756511965184/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152844714115083/asset_Boat2.txt">
+                                
+                                    Attachment: asset_Boat2.txt (878 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152843359354900/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576152843359354900/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152978386452491/asset_Boat3.txt">
+                                
+                                    Attachment: asset_Boat3.txt (1.3 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576152977333813270/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576152977333813270/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153207085072426/asset_Catapult.txt">
+                                
+                                    Attachment: asset_Catapult.txt (723 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153207621943316/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576153207621943316/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153477336530954/asset_DjSignature.txt">
+                                
+                                    Attachment: asset_DjSignature.txt (2.59 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153478297288716/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576153478297288716/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153628331606021/asset_FlagpoleDanish.txt">
+                                
+                                    Attachment: asset_FlagpoleDanish.txt (1.68 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153627111194633/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576153627111194633/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153708543475727/asset_HeartByAM.txt">
+                                
+                                    Attachment: asset_HeartByAM.txt (1.51 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153707348230144/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576153707348230144/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153804148441118/asset_human_heart.txt">
+                                
+                                    Attachment: asset_human_heart.txt (4.54 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153800214315009/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576153800214315009/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153868388401153/asset_Lamp.txt">
+                                
+                                    Attachment: asset_Lamp.txt (262 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153867318722565/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576153867318722565/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153957928271893/asset_muscle_car.txt">
+                                
+                                    Attachment: asset_muscle_car.txt (5.66 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576153956925833226/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576153956925833226/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154019865821227/asset_Nuke.txt">
+                                
+                                    Attachment: asset_Nuke.txt (968 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154018674376754/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154018674376754/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154106021019704/asset_Racecar.txt">
+                                
+                                    Attachment: asset_Racecar.txt (6.55 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154104112611329/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154104112611329/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154223612264479/asset_SewerGrill.txt">
+                                
+                                    Attachment: asset_SewerGrill.txt (752 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154222878392326/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154222878392326/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154285008748570/asset_Sign.txt">
+                                
+                                    Attachment: asset_Sign.txt (96 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154282903207947/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154282903207947/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154351643656193/asset_SphinxDjSmall_1.txt">
+                                
+                                    Attachment: asset_SphinxDjSmall_1.txt (626 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154350808989765/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154350808989765/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154476822528020/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154476822528020/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154488151474194/asset_Statue_Male.txt">
+                                
+                                    Attachment: asset_Statue_Male.txt (262 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154580983742496/asset_statue2.txt">
+                                
+                                    Attachment: asset_statue2.txt (5.43 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154581038399489/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154581038399489/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154661808111636/asset_StatueSMG.txt">
+                                
+                                    Attachment: asset_StatueSMG.txt (1.05 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154660910530584/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154660910530584/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154729474949140/asset_toilet.txt">
+                                
+                                    Attachment: asset_toilet.txt (348 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154726932938753/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154726932938753/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154794541187123/asset_Trebuchet.txt">
+                                
+                                    Attachment: asset_Trebuchet.txt (1.13 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154789663211521/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154789663211521/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154863944204288/asset_WorkingTrampolineDJ.txt">
+                                
+                                    Attachment: asset_WorkingTrampolineDJ.txt (1.35 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576154861545062401/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576154861545062401/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">FOLLOWING ASSETS ARE ALL IN THE &quot;Assets From 6roommap.txt&quot;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155160095490059/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155160095490059/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155228500525067/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155228500525067/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155261736321032/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155261736321032/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155288214962196/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155288214962196/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155304408907776/Assets_From_6roommap.txt">
+                                
+                                    Attachment: Assets_From_6roommap.txt (14.05 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155423137202246/Barn.txt">
+                                
+                                    Attachment: Barn.txt (8.94 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155419051950091/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155419051950091/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155575096705055/Big_Krungus_1.txt">
+                                
+                                    Attachment: Big_Krungus_1.txt (1.83 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155570692947969/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155570692947969/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155660425887744/Boxing_Ring.txt">
+                                
+                                    Attachment: Boxing_Ring.txt (1022 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155656831107073/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155656831107073/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">FOLLOWING ASSETS ARE ALL IN &quot;Collab Assets.txt&quot;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155803187413032/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155803187413032/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155829150023733/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155829150023733/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155856480108560/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155856480108560/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155881365045250/Collab_Assets_1.txt">
+                                
+                                    Attachment: Collab_Assets_1.txt (19.37 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155955335528449/Corner-Sofa.txt">
+                                
+                                    Attachment: Corner-Sofa.txt (1.02 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576155952315891732/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576155952315891732/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156031814467595/DjBigSphinx.txt">
+                                
+                                    Attachment: DjBigSphinx.txt (3.02 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156030526947457/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156030526947457/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156126303748107/DjDankMeisterLogo.txt">
+                                
+                                    Attachment: DjDankMeisterLogo.txt (4.77 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156122700840960/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156122700840960/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156270579417088/DjTree.txt">
+                                
+                                    Attachment: DjTree.txt (730 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156266678976552/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156266678976552/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156326212796417/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156326212796417/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Grass texture might be broken</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156356365778975/DjTreeLeaf.txt">
+                                
+                                    Attachment: DjTreeLeaf.txt (1.03 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156466130583582/FakeTaxi.txt">
+                                
+                                    Attachment: FakeTaxi.txt (912 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156463450423297/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156463450423297/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156565460221983/His_Cottage_but_in_a_map_file.txt">
+                                
+                                    Attachment: His_Cottage_but_in_a_map_file.txt (2.03 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156562280939560/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156562280939560/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156691754647638/OOF_Thinking.txt">
+                                
+                                    Attachment: OOF_Thinking.txt (1.85 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156688680222749/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156688680222749/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156779121999882/Palm-Tree-v3_22_obj_.txt">
+                                
+                                    Attachment: Palm-Tree-v3_22_obj_.txt (1.59 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156773250105375/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156773250105375/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156858247675944/prefab_BrownMushroom_2.txt">
+                                
+                                    Attachment: prefab_BrownMushroom_2.txt (101 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156855508926492/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156855508926492/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156952653070356/prefab_Burger_4.txt">
+                                
+                                    Attachment: prefab_Burger_4.txt (209 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576156948551041025/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576156948551041025/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157017811582978/prefab_Carrot_2.txt">
+                                
+                                    Attachment: prefab_Carrot_2.txt (131 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157015416635413/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157015416635413/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157081590300702/prefab_Chicken_7.txt">
+                                
+                                    Attachment: prefab_Chicken_7.txt (297 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157078356361226/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157078356361226/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157158266109952/prefab_Chicken_9.txt">
+                                
+                                    Attachment: prefab_Chicken_9.txt (334 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157155166650379/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157155166650379/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157208849547264/prefab_Dick_3.txt">
+                                
+                                    Attachment: prefab_Dick_3.txt (152 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157203669581849/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157203669581849/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157359571730447/prefab_MyAttemptForSnakewolf.txt">
+                                
+                                    Attachment: prefab_MyAttemptForSnakewolf.txt (4.27 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157355083825152/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157355083825152/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157434633256962/prefab_Pineapple_3.txt">
+                                
+                                    Attachment: prefab_Pineapple_3.txt (243 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157432460607498/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157432460607498/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157544888664064/prefab_RedMushroom_2.txt">
+                                
+                                    Attachment: prefab_RedMushroom_2.txt (101 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157539184541697/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157539184541697/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157608160002048/prefab_Semi_Truck.txt">
+                                
+                                    Attachment: prefab_Semi_Truck.txt (2.23 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157605408538625/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157605408538625/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157686442229772/prefab_SmallTable_2.txt">
+                                
+                                    Attachment: prefab_SmallTable_2.txt (104 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157680423665665/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157680423665665/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157825374486545/prefab_Tree_2.txt">
+                                
+                                    Attachment: prefab_Tree_2.txt (103 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157819972222979/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157819972222979/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157949278421002/Skull.txt">
+                                
+                                    Attachment: Skull.txt (2.58 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576157943670636565/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576157943670636565/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158052538122280/StripperAsset.txt">
+                                
+                                    Attachment: StripperAsset.txt (4.82 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158050277261314/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576158050277261314/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158143906840582/Tree_House.txt">
+                                
+                                    Attachment: Tree_House.txt (1.84 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158143088820274/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576158143088820274/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158224768696322/UFO_CowField.txt">
+                                
+                                    Attachment: UFO_CowField.txt (6.75 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158223401484298/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/575245799034716160/576158223401484298/unknown.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/512807357307158538/a4201acbfaf79c19e3f3ea66d2b5dd90.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Android Builders Club#2920">Android Builders Club</span>
+                <span class="chatlog__timestamp">May-09-19 05:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158619893104640/asset_targetfriend.txt">
+                                
+                                    Attachment: asset_targetfriend.txt (345 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158623852396554/asset_dummy.txt">
+                                
+                                    Attachment: asset_dummy.txt (1.09 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158628088774656/asset_square_target.txt">
+                                
+                                    Attachment: asset_square_target.txt (1.08 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158631985414161/blue_bed.txt">
+                                
+                                    Attachment: blue_bed.txt (573 B)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158637572096040/asset_bike.txt">
+                                
+                                    Attachment: asset_bike.txt (1.83 KB)
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576158640504045587/asset_Fountain_.txt">
+                                
+                                    Attachment: asset_Fountain_.txt (1.72 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/487751200830128138/4a7e5b480df38006bce5eb918a42b301.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mr. Needle#9846">Mr. Needle</span>
+                <span class="chatlog__timestamp">May-09-19 05:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">all my assets sorry for no images and spelling errors</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/575245799034716160/576160329554198564/asset.zip">
+                                
+                                    Attachment: asset.zip (11.72 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
